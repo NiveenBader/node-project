@@ -1,4 +1,4 @@
-export const initialusers = [
+const initialusers = [
   {
     name: {
       first: "Nick",
@@ -72,3 +72,5 @@ export const initialusers = [
     },
   },
 ];
+
+module.exports = { initialusers };

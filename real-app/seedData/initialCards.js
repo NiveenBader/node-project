@@ -1,4 +1,4 @@
-export const initialCards = [
+const initialCards = [
   {
     title: "one",
     subtitle: "one two",
@@ -66,3 +66,4 @@ export const initialCards = [
     userId: "676844a3eaa5432d476822a5",
   },
 ];
+module.exports = { initialCards };

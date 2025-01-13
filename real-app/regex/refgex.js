@@ -6,7 +6,7 @@ const webRegex =
 const classCodeRegex = /^[WD]{1}[0-9]{6}[MER]{1,2}$/;
 const objectIdRegex = /^[0-9a-fA-F]{24}$/;
 const emailRegex = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
-export {
+module.exports = {
   passwordRegex,
   phoneRegex,
   webRegex,
