@@ -1,0 +1,20 @@
+{
+  "name": "real-app",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node .",
+    "dev": "nodemon ."
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.2",
+    "mongoose": "^8.9.4",
+    "morgan": "^1.10.0",
+    "node-modules": "^1.0.1",
+    "nodeman": "^1.1.2",
+    "nodemon": "^3.1.9"
+  }
+}
