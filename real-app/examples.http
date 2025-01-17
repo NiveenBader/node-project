@@ -25,6 +25,7 @@ Content-Type: application/json
 {
     "email": "nick@gmail.com", "password": "Nick123456!"
 }
+//id:6785693bd265ca0e6f6c77fe
 
 //{
 //"email": "25Admin@hotmail.com", "password": "Abc!123Abc"
@@ -32,7 +33,7 @@ Content-Type: application/json
 
 ### Get All Users
 GET {{global}}/users
-x-auth-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Nzg1NjkzYmQyNjVjYTBlNmY2Yzc3ZmUiLCJpc0J1c2luZXNzIjp0cnVlLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3MzY4NzI5OTB9.PDQ2H1W8KBsDny0PLQ3pDKCk1-SYR2NM_Bjk93u0xNc
+x-auth-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Nzg1NjkzYmQyNjVjYTBlNmY2Yzc3ZmUiLCJpc0J1c2luZXNzIjp0cnVlLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3MzcwNzI3MDl9.0KcljmHC2wHQVpr3cpu46LcDRizvqo68Kq2Q6breo0Q
 
 ### Get Specific User
 GET {{global}}/users/6786936539eb6e6a73e84293 
@@ -69,4 +70,75 @@ x-auth-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Nzg2OTM2NTM5ZWI2ZT
 DELETE {{global}}/users/67864a5439eb6e6a73e84255
 x-auth-token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Nzg1NjkzYmQyNjVjYTBlNmY2Yzc3ZmUiLCJpc0J1c2luZXNzIjp0cnVlLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3MzY4NzI5OTB9.PDQ2H1W8KBsDny0PLQ3pDKCk1-SYR2NM_Bjk93u0xNc
 
+### Create Card
+POST {{global}}/cards/
+Content-Type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Nzg1NjkzYmQyNjVjYTBlNmY2Yzc3ZmUiLCJpc0J1c2luZXNzIjp0cnVlLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3MzcxMzk2Nzd9.rR8Hq0aW0U3G4LdeR2eqgPCYH_ekXhH3ZGk7VcMZoKU
 
+{
+  "title": "New Title Here",
+  "subtitle": "New Subtitle Here",
+  "description": "Write a detailed description of the card here\nInclude additional lines as needed",
+  "phone": "123-4567890",
+  "email": "example@example.com",
+  "web": "https://www.example.com/",
+  "image": {
+    "url": "https://your-image-url.com/image.jpg",
+    "alt": "Alternative text describing the image"
+  },
+  "address": {
+    "state": "New State",
+    "country": "New Country",
+    "city": "New City",
+    "street": "New Street",
+    "houseNumber": 123,
+    "zip": "1234567"
+  }
+}
+
+
+### Get My Cards
+GET {{global}}/cards/my-cards
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Nzg1NjkzYmQyNjVjYTBlNmY2Yzc3ZmUiLCJpc0J1c2luZXNzIjp0cnVlLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3MzcxMzk2Nzd9.rR8Hq0aW0U3G4LdeR2eqgPCYH_ekXhH3ZGk7VcMZoKU
+
+
+
+### Update Card
+PUT {{global}}/cards/678aa5f664e58159d560e03a
+Content-Type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Nzg1NjkzYmQyNjVjYTBlNmY2Yzc3ZmUiLCJpc0J1c2luZXNzIjp0cnVlLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3MzcxMzk2Nzd9.rR8Hq0aW0U3G4LdeR2eqgPCYH_ekXhH3ZGk7VcMZoKU
+
+{
+  "title": "Updated Card Title",
+  "subtitle": "Updated Subtitle",
+  "description": "Updated description for card",
+  "phone": "012-3211234",
+  "email": "qwe@gmail.com",
+  "web": "https://www.google22.com",
+  "image": {
+    "url": "https://img.izismile.com/img/img13/20201030/640/you_have_never_seen_something_like_this_640_36.jpg",
+    "alt": "updated image"
+  },
+  "address": {
+    "state": "IL",
+    "country": "Israel",
+    "city": "Arad",
+    "street": "Shoham",
+    "houseNumber": 5,
+    "zip": "8920435"
+  }
+}
+
+
+### Delete Card
+DELETE {{global}}/cards/id
+x-auth-token: YOUR_JWT_TOKEN
+
+### Update Business Number
+PATCH  {{global}}/cards/biz/678aa5f664e58159d560e03a
+Content-Type: application/json
+x-auth-token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2Nzg1NjkzYmQyNjVjYTBlNmY2Yzc3ZmUiLCJpc0J1c2luZXNzIjp0cnVlLCJpc0FkbWluIjp0cnVlLCJpYXQiOjE3MzcxMzk2Nzd9.rR8Hq0aW0U3G4LdeR2eqgPCYH_ekXhH3ZGk7VcMZoKU
+
+{
+  "bizNumber":1000055
+}
